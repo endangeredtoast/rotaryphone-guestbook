@@ -1,0 +1,30 @@
+[connection]
+id=Rotary Phone
+uuid=964b4056-7cec-47c2-960d-4e074557b0a7
+type=wifi
+autoconnect=false
+interface-name=wlan0
+permissions=
+timestamp=1680801828
+
+[wifi]
+mac-address-blacklist=
+mode=ap
+seen-bssids=B8:27:EB:C4:28:BA;
+ssid=Rotary Phone
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk=rotary123
+
+[ipv4]
+address1=192.168.5.10/24
+dns-search=
+method=shared
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=shared
+
+[proxy]

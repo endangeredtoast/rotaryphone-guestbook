@@ -1,0 +1,4 @@
+file permissions
+dnsmasq.d	644 root:root
+hosts		644 root:root
+Rotary Phone	600 root:root
