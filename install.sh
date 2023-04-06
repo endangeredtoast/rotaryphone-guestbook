@@ -18,6 +18,8 @@ echo ""
 
 # Install Node-RED
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+sudo systemctl enable nodered
+sudo systemctl start nodered
 
 
 
@@ -59,3 +61,6 @@ sudo chmod 600:600 /etc/NetworkManager/system-connections/Rotary\ Phone.nmconnec
 sudo cp rotary/ /rotary
 sudo chmod 777 /rotary
 
+
+# Install Web Server
+sudo docker compose -f /rotary/server/webserver/docker-compose.yml up -d
