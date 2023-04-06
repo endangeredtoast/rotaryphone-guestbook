@@ -13,8 +13,14 @@ echo "-- dnsmasq.config"
 echo "-- Rotary Phone.nmconnection"
 echo ""
 
+
+
+
 # Install Node-RED
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+
+
+
 
 # Install Docker Engine
 sudo apt-get update
@@ -33,6 +39,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker pi
 
 
+
+
+
 # Copy Files
 sudo cp Installation/hosts /etc/hosts
 sudo chown root:root /etc/hosts
@@ -45,3 +54,8 @@ sudo chmod 644:644 /etc/dnsmasq.conf
 sudo cp Installation/Rotary\ Phone.nmconnection /etc/NetworkManager/system-connections/Rotary\ Phone.nmconnection
 sudo chown root:root /etc/NetworkManager/system-connections/Rotary\ Phone.nmconnection
 sudo chmod 600:600 /etc/NetworkManager/system-connections/Rotary\ Phone.nmconnection
+
+
+sudo cp rotary/ /rotary
+sudo chmod 777 /rotary
+
